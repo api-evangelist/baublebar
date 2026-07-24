@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.baublebar.com/.well-known/openid-configuration
+notes: >-
+  Standards conformance asserted from the shop's live Shopify Customer Account
+  API discovery documents. Storefront commerce is exposed via a live Shopify
+  Storefront MCP server (mcp/baublebar-mcp.yml).
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server (RFC 8414) advertises authorization_code + refresh_token grants
+  - id: oidc
+    conforms: true
+    evidence: /.well-known/openid-configuration advertises issuer, jwks_uri, id_token RS256, openid scope
+  - id: oauth2-pkce
+    conforms: true
+    evidence: code_challenge_methods_supported includes S256 (RFC 7636)
+  - id: rfc8414-oauth-metadata
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server returns application/json metadata
+  - id: mcp
+    conforms: true
+    evidence: live JSON-RPC 2.0 MCP server at https://www.baublebar.com/api/mcp (tools/list verified)
+  - id: rfc9457-problem-details
+    conforms: false

@@ -1,8 +1,29 @@
 aid: baublebar
 name: BaubleBar
-description: 'BaubleBar is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  BaubleBar is a direct-to-consumer fashion jewelry and accessories brand founded
+  in 2011 and headquartered in New York City, selling affordable, trend-driven
+  earrings, necklaces, bracelets, rings, hair accessories, personalized "Design
+  Your Own" pieces, and home and gift items through its own e-commerce storefront
+  and wholesale partners. The baublebar.com storefront runs on Shopify: it exposes
+  a live Shopify Storefront MCP server for agent-driven catalog search and cart
+  operations, and authenticates shoppers through Shopify's Customer Account API
+  using OpenID Connect / OAuth 2.0 with PKCE. BaubleBar is backed by Accel and was
+  added to the API Evangelist network from that portfolio.
 url: https://raw.githubusercontent.com/api-evangelist/baublebar/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.baublebar.com/cdn/shop/files/BB_Logo_stacked.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,10 +32,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Consumer
+- Retail
+- E-commerce
+- Jewelry
+- Accessories
+- Fashion
+- Shopify
+- MCP
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,4 +51,34 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.baublebar.com
+  url: https://www.baublebar.com
+- type: MCPServer
+  name: BaubleBar Storefront MCP
+  url: mcp/baublebar-mcp.yml
+- type: WellKnown
+  name: BaubleBar well-known discovery
+  url: well-known/baublebar-well-known.yml
+- type: Authentication
+  name: BaubleBar authentication profile
+  url: authentication/baublebar-authentication.yml
+- type: OAuthScopes
+  name: BaubleBar OAuth scopes
+  url: scopes/baublebar-scopes.yml
+- type: Conformance
+  name: BaubleBar standards conformance
+  url: conformance/baublebar-conformance.yml
+- type: DomainSecurity
+  url: security/baublebar-domain-security.yml
+- type: Support
+  url: https://www.baublebar.com/pages/contact-us
+- type: SignUp
+  url: https://www.baublebar.com/account/login
+- type: PrivacyPolicy
+  url: https://www.baublebar.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://www.baublebar.com/policies/terms-of-service
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

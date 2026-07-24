@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.baublebar.com/.well-known/
+host: https://www.baublebar.com
+notes: >-
+  BaubleBar's storefront runs on Shopify. The OIDC/OAuth discovery documents
+  below are served by Shopify's Customer Account API for this shop
+  (issuer https://shopify.com/authentication/26757464148).
+documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: baublebar-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: baublebar-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://www.baublebar.com/api/mcp
+notes: >-
+  Live Shopify Storefront MCP server hosted on BaubleBar's own domain. Verified
+  2026-07-18 via a JSON-RPC tools/list call (POST https://www.baublebar.com/api/mcp).
+  Tools follow Shopify's Universal Commerce Protocol (UCP) storefront capability set.
+server:
+  name: baublebar
+  transport: http
+  url: https://www.baublebar.com/api/mcp
+  protocol: json-rpc-2.0
+tools:
+  - name: search_catalog
+    description: Search for products from the online store, hosted on Shopify (natural-language queries and/or filters; paginated via cursor).
+  - name: get_product_details
+    description: Look up a product by ID; pass options to select a specific variant, otherwise the first available variant is returned.
+  - name: get_cart
+    description: Get the cart including items, shipping options, discount info, and checkout URL for a given cart id.
+  - name: update_cart
+    description: Add/remove/update line items, buyer info, shipping details, discount codes, gift cards and notes in one consolidated call.
+  - name: search_shop_policies_and_faqs
+    description: Get facts about the store's policies, products, or services.
